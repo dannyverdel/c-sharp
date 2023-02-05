@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6VUAHiYqlYfAqlXfeJc0BIC4iLY/SFGV/FXkCAvMhlJCwOPQ2zsfy6EfIc08V/yOibzS+voWAglMZgQs+0isVg==",
+  "success": true,
+  "projectFilePath": "/Users/dannyverdel/projects/c-sharp/CSharpDemos/CSharpDemos.ConsoleApp/CSharpDemos.ConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "/Users/dannyverdel/.nuget/packages/bogus/34.0.2/bogus.34.0.2.nupkg.sha512",
+    "/Users/dannyverdel/.nuget/packages/newtonsoft.json/13.0.2/newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
