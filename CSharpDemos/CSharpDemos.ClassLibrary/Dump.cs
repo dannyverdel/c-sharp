@@ -5,12 +5,14 @@ namespace CSharpDemos.ClassLibrary
 {
     public static class StringExtension
     {
-        public static string? Dump<T>(this T obj)
+        public static string Dump<T>(this T obj, bool indent = true)
         {
-            if (obj is null) return null;
-            Console.WriteLine(obj.ToString());
+            string res = JsonConvert.SerializeObject(obj, indent ? Formatting.Indented : Formatting.None,
+                new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
 
-            return obj.ToString();
+            Console.WriteLine(res);
+
+            return res;
         }
     }
 }
