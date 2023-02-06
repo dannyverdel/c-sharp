@@ -1,25 +1,23 @@
 ﻿<Properties StartupConfiguration="{6C1CD27C-CFDF-4C6F-BF4E-E1E0F2FA4013}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.CSharpDemos.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CSharpDemos.ClassLibrary/InvokeBogus.cs">
-    <Files>
-      <File FileName="CSharpDemos.ConsoleApp/Program.cs" />
-      <File FileName="CSharpDemos.ClassLibrary/InvokeBogus.cs" Line="10" Column="10" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CSharpDemos" expanded="True">
-            <Node name="CSharpDemos.ClassLibrary" expanded="True" selected="True" />
-            <Node name="CSharpDemos.ConsoleApp" expanded="True" />
+            <Node name="CSharpDemos.ClassLibrary" expanded="True" />
+            <Node name="CSharpDemos.ConsoleApp" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.CSharpDemos.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

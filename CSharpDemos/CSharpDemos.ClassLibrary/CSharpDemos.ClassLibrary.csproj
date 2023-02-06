@@ -8,9 +8,15 @@
 
   <ItemGroup>
     <None Remove="Bogus" />
+    <None Remove="DesignPatterns\" />
+    <None Remove="DesignPatterns\FactoryPattern\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DesignPatterns\" />
+    <Folder Include="DesignPatterns\FactoryPattern\" />
   </ItemGroup>
 </Project>
