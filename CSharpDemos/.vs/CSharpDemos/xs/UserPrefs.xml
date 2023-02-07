@@ -1,16 +1,10 @@
 ﻿<Properties StartupConfiguration="{6C1CD27C-CFDF-4C6F-BF4E-E1E0F2FA4013}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.CSharpDemos.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CSharpDemos.ClassLibrary/DesignPatterns/BuilderPattern/WrongBuilder.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSharpDemos.ClassLibrary/DesignPatterns/PrototypePattern/PrototypeExcelExample.cs">
     <Files>
-      <File FileName="CSharpDemos.ClassLibrary/DesignPatterns/BuilderPattern/Builder.cs" Line="101" Column="10" />
-      <File FileName="CSharpDemos.ConsoleApp/Program.cs" Line="4" Column="120" />
-      <File FileName="CSharpDemos.ClassLibrary/DesignPatterns/BuilderPattern/WrongBuilder.cs" Line="23" Column="21" />
-      <File FileName="CSharpDemos.ClassLibrary/Dump.cs" Line="9" Column="10" />
+      <File FileName="CSharpDemos.ConsoleApp/Program.cs" Line="7" Column="20" />
+      <File FileName="CSharpDemos.ClassLibrary/DesignPatterns/PrototypePattern/PrototypeExcelExample.cs" Line="33" Column="43" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,8 +12,8 @@
           <Node name="CSharpDemos" expanded="True">
             <Node name="CSharpDemos.ClassLibrary" expanded="True">
               <Node name="DesignPatterns" expanded="True">
-                <Node name="BuilderPattern" expanded="True">
-                  <Node name="WrongBuilder.cs" selected="True" />
+                <Node name="PrototypePattern" expanded="True">
+                  <Node name="PrototypeExcelExample.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
@@ -29,5 +23,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
