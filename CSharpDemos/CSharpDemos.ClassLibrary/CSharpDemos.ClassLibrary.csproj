@@ -13,10 +13,12 @@
     <None Remove="DesignPatterns\BuilderPattern\" />
     <None Remove="DesignPatterns\PrototypePattern\" />
     <None Remove="DesignPatterns\SingletonPattern\" />
+    <None Remove="DesignPatterns\AdapterPattern\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="SendGrid" Version="9.28.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DesignPatterns\" />
@@ -24,5 +26,6 @@
     <Folder Include="DesignPatterns\BuilderPattern\" />
     <Folder Include="DesignPatterns\PrototypePattern\" />
     <Folder Include="DesignPatterns\SingletonPattern\" />
+    <Folder Include="DesignPatterns\AdapterPattern\" />
   </ItemGroup>
 </Project>
