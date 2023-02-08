@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{6C1CD27C-CFDF-4C6F-BF4E-E1E0F2FA4013}|Default">
   <MonoDevelop.Ide.ItemProperties.CSharpDemos.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="CSharpDemos.ClassLibrary/DesignPatterns/PrototypePattern/PrototypeExcelExample.cs">
     <Files>
-      <File FileName="CSharpDemos.ConsoleApp/Program.cs" Line="7" Column="20" />
+      <File FileName="CSharpDemos.ConsoleApp/Program.cs" />
       <File FileName="CSharpDemos.ClassLibrary/DesignPatterns/PrototypePattern/PrototypeExcelExample.cs" Line="33" Column="43" />
     </Files>
     <Pads>
@@ -23,9 +25,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>

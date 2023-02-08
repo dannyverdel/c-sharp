@@ -12,6 +12,7 @@
     <None Remove="DesignPatterns\FactoryPattern\" />
     <None Remove="DesignPatterns\BuilderPattern\" />
     <None Remove="DesignPatterns\PrototypePattern\" />
+    <None Remove="DesignPatterns\SingletonPattern\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
@@ -22,5 +23,6 @@
     <Folder Include="DesignPatterns\FactoryPattern\" />
     <Folder Include="DesignPatterns\BuilderPattern\" />
     <Folder Include="DesignPatterns\PrototypePattern\" />
+    <Folder Include="DesignPatterns\SingletonPattern\" />
   </ItemGroup>
 </Project>
