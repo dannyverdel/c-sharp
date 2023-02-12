@@ -1,8 +1,11 @@
 ﻿<Properties StartupConfiguration="{6C1CD27C-CFDF-4C6F-BF4E-E1E0F2FA4013}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CSharpDemos.ClassLibrary/DesignPatterns/SingletonPattern/ThreadSafeSingleton.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSharpDemos.ClassLibrary/DesignPatterns/InterpreterPattern/InterpreterPattern.cs">
     <Files>
-      <File FileName="CSharpDemos.ConsoleApp/Program.cs" Line="7" Column="20" />
-      <File FileName="CSharpDemos.ClassLibrary/DesignPatterns/SingletonPattern/ThreadSafeSingleton.cs" Line="16" Column="47" />
+      <File FileName="CSharpDemos.ConsoleApp/Program.cs" Line="4" Column="99" IsPinned="True" />
+      <File FileName="CSharpDemos.ClassLibrary/DesignPatterns/InterpreterPattern/InterpreterPattern.cs" Line="42" Column="54" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,8 +13,8 @@
           <Node name="CSharpDemos" expanded="True">
             <Node name="CSharpDemos.ClassLibrary" expanded="True">
               <Node name="DesignPatterns" expanded="True">
-                <Node name="SingletonPattern" expanded="True">
-                  <Node name="ThreadSafeSingleton.cs" selected="True" />
+                <Node name="InterpreterPattern" expanded="True">
+                  <Node name="InterpreterPattern.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
@@ -22,10 +25,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.CSharpDemos.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CSharpDemos.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

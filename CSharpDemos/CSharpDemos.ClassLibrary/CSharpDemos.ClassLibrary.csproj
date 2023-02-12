@@ -14,6 +14,14 @@
     <None Remove="DesignPatterns\PrototypePattern\" />
     <None Remove="DesignPatterns\SingletonPattern\" />
     <None Remove="DesignPatterns\AdapterPattern\" />
+    <None Remove="DesignPatterns\DecoratorAndWrapperPattern\" />
+    <None Remove="DesignPatterns\ProxyAndAmbassadorPattern\" />
+    <None Remove="DesignPatterns\CompositePattern\" />
+    <None Remove="DesignPatterns\FacadePattern\" />
+    <None Remove="DesignPatterns\BridgePattern\" />
+    <None Remove="DesignPatterns\FlyweightPattern\" />
+    <None Remove="DesignPatterns\IteratorPattern\" />
+    <None Remove="DesignPatterns\InterpreterPattern\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
@@ -27,5 +35,13 @@
     <Folder Include="DesignPatterns\PrototypePattern\" />
     <Folder Include="DesignPatterns\SingletonPattern\" />
     <Folder Include="DesignPatterns\AdapterPattern\" />
+    <Folder Include="DesignPatterns\DecoratorAndWrapperPattern\" />
+    <Folder Include="DesignPatterns\ProxyAndAmbassadorPattern\" />
+    <Folder Include="DesignPatterns\CompositePattern\" />
+    <Folder Include="DesignPatterns\FacadePattern\" />
+    <Folder Include="DesignPatterns\BridgePattern\" />
+    <Folder Include="DesignPatterns\FlyweightPattern\" />
+    <Folder Include="DesignPatterns\IteratorPattern\" />
+    <Folder Include="DesignPatterns\InterpreterPattern\" />
   </ItemGroup>
 </Project>

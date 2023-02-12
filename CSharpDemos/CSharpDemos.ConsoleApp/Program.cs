@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using CSharpDemos.ClassLibrary;
 
-IInvokeMethod im = new CSharpDemos.ClassLibrary.DesignPatterns.PrototypePattern.InvokePrototypePattern();
+var im = new CSharpDemos.ClassLibrary.DesignPatterns.InterpreterPattern.InvokeInterpreterPattern();
 
 im.InvokeMethod();
 Console.ReadLine();
