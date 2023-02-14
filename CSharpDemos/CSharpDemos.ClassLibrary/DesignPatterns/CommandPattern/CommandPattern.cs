@@ -22,9 +22,9 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.CommandPattern
 	 */
 
     public class InvokeCommandPattern : IInvokeMethod
-	{
-		public void InvokeMethod()
-		{
+    {
+        public void InvokeMethod()
+        {
             Number number = new Number(0);
             Calculator calculator = new Calculator();
 
@@ -49,7 +49,7 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.CommandPattern
             calculator.Redo(); // number.Value is now 12
             number.Dump();
         }
-	}
+    }
 
     // Command interface
     public interface ICommand

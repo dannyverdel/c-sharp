@@ -17,9 +17,9 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.ChainOfResponsibilityPattern
      */
 
     public class InvokeChainOfResponsibilityPatttern : IInvokeMethod
-	{
-		public void InvokeMethod()
-		{
+    {
+        public void InvokeMethod()
+        {
             Handler a = new ConcreteHandlerA();
             Handler b = new ConcreteHandlerB();
             Handler c = new ConcreteHandlerC();
@@ -30,8 +30,8 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.ChainOfResponsibilityPattern
             a.HandleRequest(5);
             a.HandleRequest(15);
             a.HandleRequest(25);
-		}
-	}
+        }
+    }
 
 	abstract class Handler
 	{

@@ -14,8 +14,8 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.BuilderPattern
      */
 
     public class InvokeBuilderPattern : IInvokeMethod
-	{
-		public void InvokeMethod()
+    {
+        public void InvokeMethod()
         {
             CarBuilder builder = new CarBuilder();
             CarDirector director = new CarDirector(builder);

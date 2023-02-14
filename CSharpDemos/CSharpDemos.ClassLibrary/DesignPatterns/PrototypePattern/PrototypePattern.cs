@@ -10,8 +10,8 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.PrototypePattern
      */
 
     public class InvokePrototypePattern : IInvokeMethod
-	{
-		public void InvokeMethod()
+    {
+        public void InvokeMethod()
         {
             ConcretePrototype prototype = new ConcretePrototype(10, 20);
             ConcretePrototype clone = (ConcretePrototype)prototype.Clone();

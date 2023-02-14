@@ -17,9 +17,9 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.DecoratorAndWrapperPattern
      */
 
     public class InvokeDecoratorPattern : IInvokeMethod
-	{
-		public void InvokeMethod()
-		{
+    {
+        public void InvokeMethod()
+        {
             IBeverage beverage = new Espresso();
             beverage = new Mocha(beverage);
             beverage = new Mocha(beverage);

@@ -10,7 +10,7 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.InterpreterPattern
 	 * The Context class holds the input string, and the output string is stored in it. In the Main method, we create the expressions, interpret them and finally output the result.
 	 */
 
-    public class InvokeInterpreterPattern : IInvokeMethod
+	public class InvokeInterpreterPattern : IInvokeMethod
 	{
 		public void InvokeMethod()
 		{
@@ -18,15 +18,15 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.InterpreterPattern
 
 			List<AbstractExpression> expressions_list = new List<AbstractExpression>
 			{
-				new TerminalExpression("I"),
-				new TerminalExpression("am"),
-				new TerminalExpression("a"),
-				new TerminalExpression("software"),
-				new TerminalExpression("engineer")
+			new TerminalExpression("I"),
+			new TerminalExpression("am"),
+			new TerminalExpression("a"),
+			new TerminalExpression("software"),
+			new TerminalExpression("engineer")
 			};
 
 			for (int i = 0; i < expressions_list.Count - 1; i++)
-				expressions_list[i] = new NonTerminalExpression(expressions_list[i], expressions_list[i + 1]);
+			expressions_list[i] = new NonTerminalExpression(expressions_list[i], expressions_list[i + 1]);
 
 			expressions_list[expressions_list.Count - 1].Interpret(context);
 

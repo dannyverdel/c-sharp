@@ -1,10 +1,10 @@
 ﻿using System;
 namespace CSharpDemos.ClassLibrary.DesignPatterns.IteratorPattern
 {
-	public class InvokeIteratorPattern : IInvokeMethod
-	{
-		public void InvokeMethod()
-		{
+    public class InvokeIteratorPattern : IInvokeMethod
+    {
+        public void InvokeMethod()
+        {
             var aggregate = new ConcreteAggregate<string>();
             aggregate.Add("Item 1");
             aggregate.Add("Item 2");
@@ -13,11 +13,11 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.IteratorPattern
             var iterator = aggregate.CreateIterator();
             while(!iterator.IsDone())
             {
-                iterator.CurrentItem().Dump();
-                iterator.Next();
+            iterator.CurrentItem().Dump();
+            iterator.Next();
             }
         }
-	}
+    }
 
     interface IIterator<T>
     {

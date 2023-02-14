@@ -12,8 +12,8 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.FacadePattern
      */
 
     public class InvokeFacadePattern : IInvokeMethod
-	{
-		public void InvokeMethod()
+    {
+        public void InvokeMethod()
         {
             ComplexSystem complex_system = new ComplexSystem();
             Facade facade = new Facade(complex_system);

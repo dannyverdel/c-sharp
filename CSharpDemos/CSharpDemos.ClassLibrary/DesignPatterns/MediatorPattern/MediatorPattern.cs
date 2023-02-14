@@ -12,9 +12,9 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.MediatorPattern
 	* The Register method is used to add User objects to the chat room, and the Send method is used to send messages between User objects.
 	*/
 
-    public class InvokeMediatorPattern : IInvokeMethod
+	public class InvokeMediatorPattern : IInvokeMethod
 	{
-        public void InvokeMethod()
+		public void InvokeMethod()
 		{
 			ChatRoom chat_room = new ChatRoom();
 

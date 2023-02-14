@@ -15,8 +15,8 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.FactoryPattern
      */
 
     public class InvokeFactoryPattern : IInvokeMethod
-	{
-		public void InvokeMethod()
+    {
+        public void InvokeMethod()
         {
             IAnimal animal = AnimalFactory.GetAnimal("dog");
             animal.Speak();

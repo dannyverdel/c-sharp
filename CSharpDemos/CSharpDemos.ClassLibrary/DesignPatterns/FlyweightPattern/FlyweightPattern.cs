@@ -1,24 +1,24 @@
 ﻿using System;
 namespace CSharpDemos.ClassLibrary.DesignPatterns.FlyweightPattern
 {
-	public class InvokeFlyweightPattern : IInvokeMethod
-	{
-        /*
-         * Flyweight is a design pattern that is used to reduce the memory usage of an application by sharing objects. 
-         * The idea is to store only the data that is unique to each object in memory and reuse objects that have the same data, 
-         * rather than having separate objects for each instance.
-         * 
-         * You can implement the Flyweight design pattern by creating a class for the objects you want to share, 
-         * and then using a factory class to manage the creation and sharing of these objects.
-         * 
-         * In this example, the Character class represents a character that can be displayed on a screen, 
-         * and the CharacterFactory class is responsible for managing the creation and sharing of Character objects. 
-         * When the GetCharacter method is called, it checks if the requested character already exists, and if not, 
-         * it creates a new Character object and stores it in a dictionary. When the same character is requested again, the previously created object is returned, reducing memory usage.
-         */
+    /*
+    * Flyweight is a design pattern that is used to reduce the memory usage of an application by sharing objects. 
+    * The idea is to store only the data that is unique to each object in memory and reuse objects that have the same data, 
+    * rather than having separate objects for each instance.
+    * 
+    * You can implement the Flyweight design pattern by creating a class for the objects you want to share, 
+    * and then using a factory class to manage the creation and sharing of these objects.
+    * 
+    * In this example, the Character class represents a character that can be displayed on a screen, 
+    * and the CharacterFactory class is responsible for managing the creation and sharing of Character objects. 
+    * When the GetCharacter method is called, it checks if the requested character already exists, and if not, 
+    * it creates a new Character object and stores it in a dictionary. When the same character is requested again, the previously created object is returned, reducing memory usage.
+    */
 
+    public class InvokeFlyweightPattern : IInvokeMethod
+    {
         public void InvokeMethod()
-		{
+        {
             CharacterFactory factory = new CharacterFactory();
             Character a = factory.GetCharacter('A');
             Character b = factory.GetCharacter('B');
