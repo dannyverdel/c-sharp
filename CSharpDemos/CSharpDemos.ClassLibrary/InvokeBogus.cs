@@ -4,8 +4,8 @@ using Newtonsoft.Json;
 
 namespace CSharpDemos.ClassLibrary.Bogus
 {
-	public class InvokeBogus : IInvokeMethod
-	{
+    public class InvokeBogus : IInvokeMethod
+    {
         public void InvokeMethod()
         {
             List<BogusModel> model_faker = new BogusModelFaker().Generate(1000);
