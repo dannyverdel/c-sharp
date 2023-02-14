@@ -25,6 +25,7 @@
     <None Remove="DesignPatterns\ChainOfResponsibilityPattern\" />
     <None Remove="DesignPatterns\MediatorPattern\" />
     <None Remove="DesignPatterns\CommandPattern\" />
+    <None Remove="DesignPatterns\ObserverPattern\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
@@ -49,5 +50,6 @@
     <Folder Include="DesignPatterns\ChainOfResponsibilityPattern\" />
     <Folder Include="DesignPatterns\MediatorPattern\" />
     <Folder Include="DesignPatterns\CommandPattern\" />
+    <Folder Include="DesignPatterns\ObserverPattern\" />
   </ItemGroup>
 </Project>
