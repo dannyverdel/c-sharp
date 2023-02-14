@@ -1,12 +1,12 @@
 ﻿using System;
 namespace CSharpDemos.ClassLibrary.AsyncDemo
 {
-	public class InvokeAsyncDemo
-	{
-		public async Task InvokeMethod()
-		{
-			await MakeTeaAsync();
-		}
+    public class InvokeAsyncDemo
+    {
+        public async Task InvokeMethod()
+        {
+            await MakeTeaAsync();
+        }
 
         public async Task<string> MakeTeaAsync()
         {
@@ -32,24 +32,24 @@ namespace CSharpDemos.ClassLibrary.AsyncDemo
         }
 
         public string MakeTea()
-		{
-			string water = BoilWater();
+        {
+            string water = BoilWater();
 
-			"take the cups out.".Dump();
-			"put tea in cup.".Dump();
-			string tea = $"pouring {water} in cups.".Dump();
-			return tea;
-		}
+            "take the cups out.".Dump();
+            "put tea in cup.".Dump();
+            string tea = $"pouring {water} in cups.".Dump();
+            return tea;
+        }
 
-		public string BoilWater()
-		{
-			"start the kettle.".Dump();
-			"waiting for the kettle.".Dump();
-			Task.Delay(2000).GetAwaiter().GetResult();
-			"kettle finished boiling.".Dump();
+        public string BoilWater()
+        {
+            "start the kettle.".Dump();
+            "waiting for the kettle.".Dump();
+            Task.Delay(2000).GetAwaiter().GetResult();
+            "kettle finished boiling.".Dump();
 
-			return "water";
-		}
+            return "water";
+        }
     }
 }
 
