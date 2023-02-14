@@ -17,7 +17,7 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.SingletonPattern
      */
 
     public class InvokeSingletonPattern : IInvokeMethod
-	{
+    {
         public void InvokeMethod()
         {
             Singleton instance1 = Singleton.GetInstance();
