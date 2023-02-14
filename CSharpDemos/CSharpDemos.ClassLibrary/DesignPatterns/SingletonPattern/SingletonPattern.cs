@@ -40,10 +40,9 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.SingletonPattern
 
         public static Singleton GetInstance()
         {
-            if (_instance == null)
-                lock (_lock_object)
-                    if (_instance == null)
-                        _instance = new Singleton();
+            lock (_lock_object)
+                if (_instance == null)
+                    _instance = new Singleton();
 
             return _instance;
         }

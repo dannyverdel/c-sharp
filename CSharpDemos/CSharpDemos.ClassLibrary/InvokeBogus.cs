@@ -2,7 +2,7 @@
 using Bogus;
 using Newtonsoft.Json;
 
-namespace CSharpDemos.ClassLibrary
+namespace CSharpDemos.ClassLibrary.Bogus
 {
 	public class InvokeBogus : IInvokeMethod
 	{
@@ -10,7 +10,7 @@ namespace CSharpDemos.ClassLibrary
         {
             List<BogusModel> model_faker = new BogusModelFaker().Generate(1000);
 
-            Console.WriteLine(JsonConvert.SerializeObject(model_faker.First()));
+            model_faker.First().Dump();
         }
     }
 

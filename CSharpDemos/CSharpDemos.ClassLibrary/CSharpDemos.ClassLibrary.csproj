@@ -22,6 +22,8 @@
     <None Remove="DesignPatterns\FlyweightPattern\" />
     <None Remove="DesignPatterns\IteratorPattern\" />
     <None Remove="DesignPatterns\InterpreterPattern\" />
+    <None Remove="DesignPatterns\ChainOfResponsibilityPattern\" />
+    <None Remove="DesignPatterns\MediatorPattern\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
@@ -43,5 +45,7 @@
     <Folder Include="DesignPatterns\FlyweightPattern\" />
     <Folder Include="DesignPatterns\IteratorPattern\" />
     <Folder Include="DesignPatterns\InterpreterPattern\" />
+    <Folder Include="DesignPatterns\ChainOfResponsibilityPattern\" />
+    <Folder Include="DesignPatterns\MediatorPattern\" />
   </ItemGroup>
 </Project>
