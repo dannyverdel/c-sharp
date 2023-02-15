@@ -28,6 +28,7 @@
     <None Remove="DesignPatterns\ObserverPattern\" />
     <None Remove="DesignPatterns\MementoPattern\" />
     <None Remove="DesignPatterns\StrategyPattern\" />
+    <None Remove="DesignPatterns\StatePattern\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
@@ -55,5 +56,6 @@
     <Folder Include="DesignPatterns\ObserverPattern\" />
     <Folder Include="DesignPatterns\MementoPattern\" />
     <Folder Include="DesignPatterns\StrategyPattern\" />
+    <Folder Include="DesignPatterns\StatePattern\" />
   </ItemGroup>
 </Project>
