@@ -15,21 +15,21 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.ObserverPattern
 	 */
 
     public class InvokeObserverPattern : IInvokeMethod
-	{
-		public void InvokeMethod()
-		{
+    {
+        public void InvokeMethod()
+        {
             StockMarket stockMarket = new StockMarket("Microsoft", 100);
             Investor investor1 = new Investor("John");
             Investor investor2 = new Investor("Jane");
 
             stockMarket.Attach(investor1);
             stockMarket.Attach(investor2);
-            stockMarket.UpdateStockPrice(105); // Output: Notified John of Microsoft's price change to $105.00
-                                               //         Notified Jane of Microsoft's price change to $105.00
+            stockMarket.UpdateStockPrice(105);  // Output: Notified John of Microsoft's price change to $105.00
+                                                //         Notified Jane of Microsoft's price change to $105.00
             stockMarket.Detach(investor1);
-            stockMarket.UpdateStockPrice(110); // Output: Notified Jane of Microsoft's price change to $110.00
+            stockMarket.UpdateStockPrice(110);  // Output: Notified Jane of Microsoft's price change to $110.00
         }
-	}
+    }
 
     // Define the Subject interface
     public interface ISubject
