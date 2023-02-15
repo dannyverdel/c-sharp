@@ -30,6 +30,7 @@
     <None Remove="DesignPatterns\StrategyPattern\" />
     <None Remove="DesignPatterns\StatePattern\" />
     <None Remove="DesignPatterns\TemplateMethodPattern\" />
+    <None Remove="DesignPatterns\MonadPattern\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
@@ -59,5 +60,6 @@
     <Folder Include="DesignPatterns\StrategyPattern\" />
     <Folder Include="DesignPatterns\StatePattern\" />
     <Folder Include="DesignPatterns\TemplateMethodPattern\" />
+    <Folder Include="DesignPatterns\MonadPattern\" />
   </ItemGroup>
 </Project>
