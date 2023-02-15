@@ -29,7 +29,7 @@
     <None Remove="DesignPatterns\MementoPattern\" />
     <None Remove="DesignPatterns\StrategyPattern\" />
     <None Remove="DesignPatterns\StatePattern\" />
-    <None Remove="DesignPatterns\VIsitorPattern\" />
+    <None Remove="DesignPatterns\TemplateMethodPattern\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
@@ -58,6 +58,6 @@
     <Folder Include="DesignPatterns\MementoPattern\" />
     <Folder Include="DesignPatterns\StrategyPattern\" />
     <Folder Include="DesignPatterns\StatePattern\" />
-    <Folder Include="DesignPatterns\VIsitorPattern\" />
+    <Folder Include="DesignPatterns\TemplateMethodPattern\" />
   </ItemGroup>
 </Project>
