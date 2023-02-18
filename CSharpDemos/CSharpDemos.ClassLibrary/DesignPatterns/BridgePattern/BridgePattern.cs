@@ -8,62 +8,44 @@ namespace CSharpDemos.ClassLibrary.DesignPatterns.BridgePattern
     * In simple terms, the Bridge design pattern allows you to create an interface that can have multiple implementations, which can be switched out dynamically. 
     * This means that you can change the behavior of your system by swapping out the implementation of an interface, without changing the code that uses that interface.
     * 
-    * With this example, you can create multiple implementations of IWeapon (Bow and Explosives), 
-    * and you can switch the implementation of IWeapon dynamically by changing the constructor of the Mob objects.
-    * 
-    * You can see that the Skeleton is given a bow, while the Creeper is given explosives, 
-    * because they were constructed with different implementations of IWeapon. 
-    * You can also change the implementation of the weapon dynamically by creating a new instance of the Mob class with a different IWeapon implementation.
+    * In this example, we have a MediaPlayer abstraction and an MP3Player implementation. 
+    * We also have an AudioOutput interface and a Headphones implementation. 
+    * The MP3Player implementation takes an AudioOutput in its constructor, and when the Play method is called, 
+    * it delegates the audio output to the audio output implementation. In the Main method, we create a Headphones audio output and an MP3Player media player, 
+    * and we play an MP3 file through the headphones.
     */
 
     public class InvokeBridgePattern : IInvokeMethod
     {
         public void InvokeMethod()
         {
-            IWeapon skeleton_weapon = new Bow();
-            IWeapon creeper_weapon = new Explosives();
-
-            Mob skeleton = new Skeleton(skeleton_weapon);
-            Mob creeper = new Creeper(creeper_weapon);
-
-            Console.WriteLine(skeleton);
-            Console.WriteLine(creeper);
+            IAudioOutput headphones = new Headphones();
+            MediaPlayer mp3_player = new MP3Player(headphones);
+            mp3_player.Play("KaiKai Kitan.mp3");
         }
     }
 
-    public interface IWeapon
+    public abstract class MediaPlayer
     {
-        string Weapon { get; }
+        protected IAudioOutput _audio_output;
+        public MediaPlayer(IAudioOutput audio_output) => _audio_output = audio_output;
+        public abstract void Play(string file_name);
     }
 
-    public class Bow : IWeapon
+    public class MP3Player : MediaPlayer
     {
-        public string Weapon => "Bow";
+        public MP3Player(IAudioOutput audio_output) : base(audio_output) { }
+        public override void Play(string file_name) => _audio_output.PlayMp3(file_name);
     }
 
-    public class Explosives : IWeapon
+    public interface IAudioOutput
     {
-        public string Weapon => "Explosives";
+        void PlayMp3(string file_name);
     }
 
-    public abstract class Mob
+    public class Headphones : IAudioOutput
     {
-        protected IWeapon weapon;
-        public Mob(IWeapon weapon) => this.weapon = weapon;
-        public abstract string Name { get; }
-        public override string ToString() => $"Giving {weapon.Weapon} to {Name}";
-    }
-
-    public class Skeleton : Mob
-    {
-        public Skeleton(IWeapon weapon) : base(weapon) { }
-        public override string Name => "Skeleton";
-    }
-
-    public class Creeper : Mob
-    {
-        public Creeper(IWeapon weapon) : base(weapon) { }
-        public override string Name => "Creeper";
+        public void PlayMp3(string file_name) => $"Playing {file_name} trough headphones".Dump();
     }
 }
 

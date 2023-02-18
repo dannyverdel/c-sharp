@@ -31,6 +31,7 @@
     <None Remove="DesignPatterns\StatePattern\" />
     <None Remove="DesignPatterns\TemplateMethodPattern\" />
     <None Remove="DesignPatterns\MonadPattern\" />
+    <None Remove="DesignPatterns\MonoidPattern\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
@@ -61,5 +62,6 @@
     <Folder Include="DesignPatterns\StatePattern\" />
     <Folder Include="DesignPatterns\TemplateMethodPattern\" />
     <Folder Include="DesignPatterns\MonadPattern\" />
+    <Folder Include="DesignPatterns\MonoidPattern\" />
   </ItemGroup>
 </Project>
