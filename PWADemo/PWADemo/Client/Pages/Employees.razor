@@ -1,0 +1,47 @@
+﻿@page "/Employees"
+@inject IEmployeeService EmployeeService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Employees</PageTitle>
+
+@if (QueryableEmployees is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <QuickGrid Items="@FilteredEmployees" ResizableColumns="true" Pagination="@pagination">
+        <PropertyColumn Property="@(e => e.Name)" Sortable="true" Class="employee-name" IsDefaultSort="SortDirection.Ascending">
+            <ColumnOptions>
+                <div class="search-box">
+                    <input type="search" autofocus @bind="NameFilter" @bind:event="oninput" placeholder="Employee name..." />
+                </div>
+            </ColumnOptions>
+        </PropertyColumn>
+        <PropertyColumn Property="@(e => e.Email)" Sortable="true" />
+        <PropertyColumn Property="@(e => e.Phone)" Sortable="true" />
+        <TemplateColumn Title="">
+            <button class="btn btn-primary" @onclick="@(() => ShowEmployee(context))"><i class="oi oi-pencil"></i></button>
+        </TemplateColumn>
+    </QuickGrid>
+
+    <Paginator Value="@pagination" />
+
+    <button class="btn btn-primary" @onclick="CreateNewEmployee">Create new employee</button>
+}
+
+@code {
+    private IQueryable<PWADemo.Shared.Employee>? QueryableEmployees;
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 10 };
+    private string NameFilter = string.Empty;
+    private IQueryable<PWADemo.Shared.Employee>? FilteredEmployees => QueryableEmployees?.Where(x => x.Name.Contains(NameFilter, StringComparison.CurrentCultureIgnoreCase));
+
+    protected override async Task OnInitializedAsync()
+    {
+        await EmployeeService.GetEmployees();
+        QueryableEmployees = EmployeeService.Employees.AsQueryable();
+    }
+    private void ShowEmployee(PWADemo.Shared.Employee employee) => NavigationManager.NavigateTo($"employee/{employee.Id}");
+    private void CreateNewEmployee() => NavigationManager.NavigateTo($"employee");
+}
+
