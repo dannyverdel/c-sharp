@@ -1,6 +1,7 @@
 ﻿@page "/employee"
 @page "/employee/{id:int}"
 @inject IEmployeeService EmployeeService
+@inject IJSRuntime JsRuntime
 
 @if (Id is null)
 {
@@ -13,7 +14,9 @@ else
     <h3>Edit @employee.Name</h3>
 }
 
-<EditForm Model="employee" OnSubmit="HandleSubmit">
+<EditForm Model="employee" OnValidSubmit="HandleSubmit" OnInvalidSubmit="HandleInvalidSubmit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
     <div>
         <label for="name">Name</label>
         <InputText id="name" @bind-Value="@employee.Name" class="form-control"></InputText>
@@ -28,7 +31,10 @@ else
     </div>
     <br/>
     <button type="submit" class="btn btn-primary">@BtnText</button>
-    <button type="button" class="btn btn-danger" @onclick="DeleteEmployee">Delete employee</button>
+    @if(Id is not null)
+    {
+        <button type="button" class="btn btn-danger" @onclick="DeleteEmployee">Delete employee</button>
+    }
 </EditForm>
 
 @code {
@@ -55,6 +61,11 @@ else
             await EmployeeService.CreateEmployee(employee);
         else
             await EmployeeService.UpdateEmployee(employee);
+    }
+
+    async Task HandleInvalidSubmit()
+    {
+        await JsRuntime.InvokeVoidAsync("alert", "Invalid entry, please enter valid values.");
     }
 
     async Task DeleteEmployee() => await EmployeeService.DeleteEmployee(employee.Id);

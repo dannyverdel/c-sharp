@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Bogus;
 
 namespace PWADemo.Shared
@@ -6,8 +7,14 @@ namespace PWADemo.Shared
 	public class Employee
 	{
 		public int Id { get; set; }
+		[Required]
+		[StringLength(20, MinimumLength = 3, ErrorMessage = "Name must be between 3 and 20 characters long.")]
 		public string Name { get; set; } = string.Empty;
+
+		[Required]
+		[RegularExpression(@"^([\w-\.+]+)@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$", ErrorMessage = "Email must be a valid email.")]
 		public string Email { get; set; } = string.Empty;
+
 		public string Phone { get; set; } = string.Empty;
 	}
 
