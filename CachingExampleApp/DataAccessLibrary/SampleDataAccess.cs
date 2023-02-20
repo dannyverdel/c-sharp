@@ -3,55 +3,55 @@ using Bogus;
 using Microsoft.Extensions.Caching.Memory;
 namespace DataAccessLibrary
 {
-	public class SampleDataAccess
-	{
-		private readonly IMemoryCache _memory_cache;
-		public SampleDataAccess(IMemoryCache memory_cache) => _memory_cache = memory_cache;
+    public class SampleDataAccess
+    {
+        private readonly IMemoryCache _memory_cache;
+        public SampleDataAccess(IMemoryCache memory_cache) => _memory_cache = memory_cache;
 
-		public List<EmployeeModel> GetEmployees()
-		{
-			List<EmployeeModel> output = new EmployeeFaker().Generate(100);
-
-			Thread.Sleep(3000);
-
-			return output;
-		}
-
-		public async Task<List<EmployeeModel>> GetEmployeesAsync()
-		{
+        public List<EmployeeModel> GetEmployees()
+        {
             List<EmployeeModel> output = new EmployeeFaker().Generate(100);
 
-			await Task.Delay(3000);
+            Thread.Sleep(3000);
 
             return output;
         }
 
-		public async Task<List<EmployeeModel>> GetEmployeesCache()
-		{
-			List<EmployeeModel>? output;
+        public async Task<List<EmployeeModel>> GetEmployeesAsync()
+        {
+            List<EmployeeModel> output = new EmployeeFaker().Generate(100);
 
-			output = _memory_cache.Get<List<EmployeeModel>>("employees");
+            await Task.Delay(3000);
 
-			if (output is null)
-			{
+            return output;
+        }
+
+        public async Task<List<EmployeeModel>> GetEmployeesCache()
+        {
+            List<EmployeeModel>? output;
+
+            output = _memory_cache.Get<List<EmployeeModel>>("employees");
+
+            if (output is null)
+            {
                 output = await GetEmployeesAsync();
-				_memory_cache.Set("employees", output, TimeSpan.FromMinutes(1));
+                _memory_cache.Set("employees", output, TimeSpan.FromMinutes(1));
             }
 
-			return output;
+            return output;
         }
-	}
+    }
 
-	public class EmployeeFaker : Faker<EmployeeModel>
-	{
-		public EmployeeFaker()
-		{
-			Random rnd = new Random();
+    public class EmployeeFaker : Faker<EmployeeModel>
+    {
+        public EmployeeFaker()
+        {
+            Random rnd = new Random();
 
-			UseSeed(rnd.Next(1000))
-				.RuleFor(x => x.FirstName, ef => ef.Person.FirstName)
-				.RuleFor(x => x.LastName, ef => ef.Person.LastName);
+            UseSeed(rnd.Next(1000))
+            .RuleFor(x => x.FirstName, ef => ef.Person.FirstName)
+            .RuleFor(x => x.LastName, ef => ef.Person.LastName);
         }
-	}
+    }
 }
 
