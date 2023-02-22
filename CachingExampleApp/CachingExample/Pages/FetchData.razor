@@ -5,13 +5,14 @@
 
 <h1>Employee Directory</h1>
 
-@if(employees is not null)
+@if (employees is not null)
 {
-    @foreach(EmployeeModel employee in employees)
+    @foreach (EmployeeModel employee in employees)
     {
         <h3>@employee.FirstName @employee.LastName</h3>
     }
-} else
+}
+else
 {
     <p><em>Loading...</em></p>
 }
