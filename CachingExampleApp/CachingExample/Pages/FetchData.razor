@@ -5,12 +5,20 @@
 
 <h1>Employee Directory</h1>
 
-@if (employees is not null)
+@if (FilteredEmployees is not null)
 {
-    @foreach (EmployeeModel employee in employees)
-    {
-        <h3>@employee.FirstName @employee.LastName</h3>
-    }
+    <QuickGrid Items="@FilteredEmployees" ResizableColumns="true" Pagination="@pagination">
+        <PropertyColumn Property="@(e => e.FirstName + " " + e.LastName)" Title="Name" Sortable="true" Class="employee-name" IsDefaultSort="SortDirection.Ascending">
+            <ColumnOptions>
+                <div class="search-box">
+                    <input type="search" autofocus @bind="NameFilter" @bind:event="oninput" placeholder="Employee name..." />
+                </div>
+            </ColumnOptions>
+        </PropertyColumn>
+        <PropertyColumn Property="@(e => e.Age)" Sortable="true" />
+    </QuickGrid>
+
+    <Paginator Value="@pagination" />
 }
 else
 {
@@ -18,11 +26,15 @@ else
 }
 
 @code {
-    List<EmployeeModel>? employees;
+    private IQueryable<EmployeeModel>? Employees;
+    private IQueryable<EmployeeModel>? FilteredEmployees => Employees?.Where(x => $"{x.FirstName} {x.LastName}".Contains(NameFilter, StringComparison.CurrentCultureIgnoreCase));
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 10 };
+    private string NameFilter = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
-        employees = await data.GetEmployeesCache();
+        List<EmployeeModel>? employees = await data.GetEmployeesCache();
+        Employees = employees.AsQueryable();
     }
 }
 
