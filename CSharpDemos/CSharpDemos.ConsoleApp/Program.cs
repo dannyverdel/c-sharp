@@ -33,6 +33,7 @@ class Program
 
 		var svc = ActivatorUtilities.CreateInstance<GreetingService>(host.Services);
 		svc.Run();
+
 		Console.ReadLine();
 	}
 

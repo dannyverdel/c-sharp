@@ -16,6 +16,7 @@ public class GreetingService : IGreetingService
 
 	public void Run()
 	{
+		_log.LogInformation("Fetched from Serilog.MinimumLevel.Override.Microsoft: {SerilogMinimumLevelOverrideMicrosoft}", _config.GetValue<string>("Serilog:MinimumLevel:Override:Microsoft"));
 		for (int i = 0; i < _config.GetValue<int>("LoopTimes"); i++)
 			_log.LogInformation("Run number {runnumber}", i);
 	}
