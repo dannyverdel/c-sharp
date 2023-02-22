@@ -7,61 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Bogus" />
-    <None Remove="DesignPatterns\" />
-    <None Remove="DesignPatterns\FactoryPattern\" />
-    <None Remove="DesignPatterns\BuilderPattern\" />
-    <None Remove="DesignPatterns\PrototypePattern\" />
-    <None Remove="DesignPatterns\SingletonPattern\" />
-    <None Remove="DesignPatterns\AdapterPattern\" />
-    <None Remove="DesignPatterns\DecoratorAndWrapperPattern\" />
-    <None Remove="DesignPatterns\ProxyAndAmbassadorPattern\" />
-    <None Remove="DesignPatterns\CompositePattern\" />
-    <None Remove="DesignPatterns\FacadePattern\" />
-    <None Remove="DesignPatterns\BridgePattern\" />
-    <None Remove="DesignPatterns\FlyweightPattern\" />
-    <None Remove="DesignPatterns\IteratorPattern\" />
-    <None Remove="DesignPatterns\InterpreterPattern\" />
-    <None Remove="DesignPatterns\ChainOfResponsibilityPattern\" />
-    <None Remove="DesignPatterns\MediatorPattern\" />
-    <None Remove="DesignPatterns\CommandPattern\" />
-    <None Remove="DesignPatterns\ObserverPattern\" />
-    <None Remove="DesignPatterns\MementoPattern\" />
-    <None Remove="DesignPatterns\StrategyPattern\" />
-    <None Remove="DesignPatterns\StatePattern\" />
-    <None Remove="DesignPatterns\TemplateMethodPattern\" />
-    <None Remove="DesignPatterns\MonadPattern\" />
-    <None Remove="DesignPatterns\MonoidPattern\" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="SendGrid" Version="9.28.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.4.0" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="5.0.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DesignPatterns\" />
-    <Folder Include="DesignPatterns\FactoryPattern\" />
-    <Folder Include="DesignPatterns\BuilderPattern\" />
-    <Folder Include="DesignPatterns\PrototypePattern\" />
-    <Folder Include="DesignPatterns\SingletonPattern\" />
-    <Folder Include="DesignPatterns\AdapterPattern\" />
-    <Folder Include="DesignPatterns\DecoratorAndWrapperPattern\" />
-    <Folder Include="DesignPatterns\ProxyAndAmbassadorPattern\" />
-    <Folder Include="DesignPatterns\CompositePattern\" />
-    <Folder Include="DesignPatterns\FacadePattern\" />
-    <Folder Include="DesignPatterns\BridgePattern\" />
-    <Folder Include="DesignPatterns\FlyweightPattern\" />
-    <Folder Include="DesignPatterns\IteratorPattern\" />
-    <Folder Include="DesignPatterns\InterpreterPattern\" />
-    <Folder Include="DesignPatterns\ChainOfResponsibilityPattern\" />
-    <Folder Include="DesignPatterns\MediatorPattern\" />
-    <Folder Include="DesignPatterns\CommandPattern\" />
-    <Folder Include="DesignPatterns\ObserverPattern\" />
-    <Folder Include="DesignPatterns\MementoPattern\" />
-    <Folder Include="DesignPatterns\StrategyPattern\" />
-    <Folder Include="DesignPatterns\StatePattern\" />
-    <Folder Include="DesignPatterns\TemplateMethodPattern\" />
-    <Folder Include="DesignPatterns\MonadPattern\" />
-    <Folder Include="DesignPatterns\MonoidPattern\" />
+    <None Remove="DependencyInjectionDemo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DependencyInjectionDemo\" />
   </ItemGroup>
 </Project>
