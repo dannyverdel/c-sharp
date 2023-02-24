@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cBxXRsjypKOO7d644jo916W/+hY89aYoiZjCFsOaf8L2ZuA46hDFZzYvocQNCJnQmiQbqXsb4KGDdDDZ0T7K3w==",
+  "success": true,
+  "projectFilePath": "/Users/dannyverdel/projects/c-sharp/TestingDemo/DemoConsole/DemoConsole.csproj",
+  "expectedPackageFiles": [
+    "/Users/dannyverdel/.nuget/packages/newtonsoft.json/13.0.2/newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
