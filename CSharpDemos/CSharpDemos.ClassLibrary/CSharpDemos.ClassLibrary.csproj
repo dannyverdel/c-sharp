@@ -17,8 +17,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="DependencyInjectionDemo\" />
+    <None Remove="DesignPatterns\RepositoryPattern\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DependencyInjectionDemo\" />
+    <Folder Include="DesignPatterns\RepositoryPattern\" />
   </ItemGroup>
 </Project>
