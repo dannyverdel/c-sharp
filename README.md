@@ -8,3 +8,4 @@ This is repository contains all tricks I use for C#
 - Observer
 - Visitor
 - Proxy/ambassador
+- Repository 
