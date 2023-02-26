@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OODemo", "OODemo\OODemo.csproj", "{4CCC079B-1788-4C8B-B650-C690B07D302F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterOODemo", "BetterOODemo\BetterOODemo.csproj", "{402C681B-F1E2-45FC-AE43-2C1179F0077E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDemo", "EmployeeDemo\EmployeeDemo.csproj", "{62486C5A-A7A9-4EAA-AE7C-1F18B9B23E24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CCC079B-1788-4C8B-B650-C690B07D302F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CCC079B-1788-4C8B-B650-C690B07D302F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CCC079B-1788-4C8B-B650-C690B07D302F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CCC079B-1788-4C8B-B650-C690B07D302F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{402C681B-F1E2-45FC-AE43-2C1179F0077E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{402C681B-F1E2-45FC-AE43-2C1179F0077E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{402C681B-F1E2-45FC-AE43-2C1179F0077E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{402C681B-F1E2-45FC-AE43-2C1179F0077E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62486C5A-A7A9-4EAA-AE7C-1F18B9B23E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62486C5A-A7A9-4EAA-AE7C-1F18B9B23E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62486C5A-A7A9-4EAA-AE7C-1F18B9B23E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62486C5A-A7A9-4EAA-AE7C-1F18B9B23E24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F0EA795-6EF3-43AF-A3FE-B60189D14FFF}
+	EndGlobalSection
+EndGlobal
