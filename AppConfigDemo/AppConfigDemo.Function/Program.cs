@@ -14,7 +14,7 @@ builder.ConfigureFunctionsWebApplication();
 //     .ConfigureFunctionsApplicationInsights();
 
 builder.Configuration.AddAzureAppConfiguration(options => {
-    options.Connect("Endpoint=https://ac-verdel-az204.azconfig.io;Id=xN06;Secret=3vKExgvrmYlhsgHHlj3pJkeclimR71YHwqR2aJPbZizgQSndgwhqJQQJ99BBAC5RqLJq7THbAAACAZAC3icd")
+    options.Connect("myConnectionString")
     .ConfigureKeyVault(kv => kv.SetCredential(new DefaultAzureCredential()))
     .Select(KeyFilter.Any, LabelFilter.Null)
     .Select(KeyFilter.Any, "Development")
