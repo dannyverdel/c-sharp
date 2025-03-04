@@ -8,7 +8,7 @@ namespace EventGrid.Demo.Publisher
         static async Task Main(string[] args) {
             string namespaceEndpoint = "https://egn-verdel-az204.westeurope-1.eventgrid.azure.net";
             string topicName = "egt-verdel-az204";
-            string topicKey = "2p2uFuWmj1A58GAIu3Cg7UAAzSKdwh3wr4QWxExtgBugdiyPlMCGJQQJ99BCAC5RqLJXJ3w3AAABAZEGxM8c";
+            string topicKey = "";
 
             EventGridSenderClient client = new(new Uri(namespaceEndpoint), topicName, new Azure.AzureKeyCredential(topicKey));
 
