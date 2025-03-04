@@ -31,8 +31,8 @@ namespace EventHub.Demo.Consumer
         }
 
         static async Task ProcessEventsWithCheckpoint() {
-            //using CancellationTokenSource cancellationSource = new();
-            //cancellationSource.CancelAfter(TimeSpan.FromSeconds(45));
+            using CancellationTokenSource cancellationSource = new();
+            cancellationSource.CancelAfter(TimeSpan.FromSeconds(45));
 
             Task processEventHandler(ProcessEventArgs eventArgs) {
                 Console.WriteLine($"Event Received: {Encoding.UTF8.GetString(eventArgs.Data.Body.ToArray())}");
@@ -48,12 +48,10 @@ namespace EventHub.Demo.Consumer
             processor.ProcessEventAsync += processEventHandler;
             processor.ProcessErrorAsync += processErrorHandler;
 
-            await processor.StartProcessingAsync();
-            //await processor.StartProcessingAsync(cancellationSource.Token);
+            await processor.StartProcessingAsync(cancellationSource.Token);
 
             try {
-                await Task.Delay(Timeout.Infinite);
-                //await Task.Delay(Timeout.Infinite, cancellationSource.Token);
+                await Task.Delay(Timeout.Infinite, cancellationSource.Token);
             } catch ( TaskCanceledException ) {
                 // expcected when the delay is canceled
             }
